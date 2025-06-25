@@ -34,6 +34,21 @@ public class Node implements BasicGoodBehavior, Comparable<Node> {
     public String getValue() {
         return value;
     } // method getValue
+    /**
+     * Accessor for Next
+     * @return this.next
+     */
+    public Node getNext() {
+        return next;
+    }
+
+    /**
+     * Accessor for Previous
+     * @return this.previous
+     */
+    public Node getPrevious() {
+        return previous;
+    }
 
     /** Mutator for next */
     public void setNext(Node next) {

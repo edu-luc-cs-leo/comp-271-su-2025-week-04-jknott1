@@ -24,7 +24,20 @@ public class DoubleLinkedList implements Comparable<DoubleLinkedList> {
     // --------
     // * well, almost always ...
     public String toString() {
-        return this.name;
+        String retStr = "[";
+        Node cursor = this.head;
+        boolean first = true;
+        while (cursor != null) {
+            if (first) {
+                retStr += "\"" + cursor.getValue() + "\"";
+                first = false;
+            } else {
+                retStr += ", " + "\"" + cursor.getValue() + "\"";
+            }
+            cursor = cursor.getNext();
+        }
+        retStr += "]";
+        return retStr;
     } // method toString
 
     /**
